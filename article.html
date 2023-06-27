@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Статья</title>
+    <link rel="stylesheet" href="glav.css">
+<link rel="stylesheet" href="article.css">
+<link rel="stylesheet" href="footer.css">
+</head>
+   
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <img src="img/logo.svg" alt="Логотип" class="desktop-logo">
+          </div>
+          <ul class="menu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="inde.html">Выбор теста</a></li>
+            <li><a href="statii.html">Статьи</a></li>
+            <li><a href="iz.html">Избранное</a></li>
+            <li><a href="obratsviz.html">Комментарии</a></li>
+          </ul>
+          <div class="burger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <ul class="burger-menu-items">
+            <li><a href="glav.html">Главная</a></li>
+            <li><a href="inde.html">Выбор теста</a></li>
+            <li><a href="statii.html">Статьи</a></li>
+            <li><a href="iz.html">Избранное</a></li>
+            <li><a href="obratsviz.html">Комментарии</a></li>
+          </ul>
+        </nav>
+      </header>
+<div class="contant_x2x">
+    <h1 class="articleTitle" id="articleTitle"></h1>
+    <img id="articleImage" src="" alt="">
+    <p class="articleContent" id="articleContent"></p>
+    <div class="contant">
+    <a class="knopka_nazat" href="statii.html">Вернуться к списку статей</a>
+    </div>
+</div>
+<footer>
+  <div class=".container_X1">
+    <div class="footer-content">
+      <div class="logo">
+        <img class="logo_img" src="img/logo.svg" alt="Логотип">
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="glav.html">Главная</a></li>
+          <li><a href="inde.html">Выбор теста</a></li>
+          <li><a href="statii.html">Статьи</a></li>
+          <li><a href="iz.html">Избранное</a></li>
+        </ul>
+      </nav>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"><img class="vk" src="img/pngegg (1).png"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <!-- <div class="footer-bottom">
+      <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </div> -->
+  </div>
+</footer>
+    <script>
+        // Получаем значение параметра "id" из URL-адреса
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleId = urlParams.get('id');
+
+        // Определяем данные для каждой статьи
+        const articles = [
+            {
+                title: 'Что такое Python',
+                image: 'article1.jpg',
+                content: 'Язык программирования Python Python — это высокоуровневый интерпретируемый язык программирования, который широко используется в различных областях, включая веб-разработку, науку о данных, машинное обучение и научные вычисления. Он был создан Гвидо ван Россумом в конце 1980-х и выпущен в 1991 году.1.Преимущества и недостаткиPython имеет простой и понятный синтаксис, что делает его доступным для начинающих.2. Он также имеет большую стандартную библиотеку и множество сторонних пакетов, что делает его универсальным языком для различных приложений. Python — это интерпретируемый язык, а это значит, что его не нужно компилировать перед запуском, что ускоряет разработку и тестирование кода.3.Однако интерпретируемый характер Python также может сделать его медленнее, чем компилируемые языки, такие как C++ или Java. Кроме того, динамическая типизация Python может привести к ошибкам, которые могут быть обнаружены только во время выполнения.3.ПриложенияPython используется во многих отраслях и областях, в том числе:Веб-разработка: Python имеет множество веб-фреймворков, таких как Django и Flask, которые упрощают создание веб-приложений.4.Наука о данных: Python имеет множество библиотек, таких как NumPy, Pandas и Matplotlib, которые упрощают работу с данными.2.Машинное обучение: в Python есть множество библиотек, таких как TensorFlow и PyTorch, которые упрощают создание и обучение моделей машинного обучения.2.Научные вычисления: Python имеет множество библиотек, таких как SciPy и SymPy, которые упрощают выполнение научных вычислений.2.Изучение PythonPython — отличный язык для начинающих, и для его изучения доступно множество ресурсов. Некоторые популярные ресурсы включают в себя:Онлайн-курсы. Такие веб-сайты, как Coursera, Udemy и Codecademy, предлагают курсы по Python для начинающих и опытных пользователей.Книги. По Python доступно множество книг, в том числе «Python Crash Course» Эрика Маттеса и «Learning Python» Марка ЛутцаУчебники. Такие веб-сайты, как Real Python и Python.org, предлагают учебные пособия по различным аспектам Python.В заключение, Python — это универсальный и популярный язык программирования, который используется во многих отраслях и областях. Он имеет простой синтаксис и легок в изучении, что делает его отличным языком для начинающих.  '
+              
+              }, 
+             {
+                title: 'Статья 2',
+                image: 'article2.jpg',
+                content: 'Содержимое статьи 2...'
+            },
+            {
+                title: 'Статья 3',
+                image: 'article3.jpg',
+                content: 'Содержимое статьи 3...'
+            }
+        ];
+
+        // Получаем выбранную статью по ее индексу
+        const selectedArticle = articles[articleId - 1];
+
+        // Заполняем данные статьи на странице
+        document.getElementById('articleTitle').textContent = selectedArticle.title;
+        document.getElementById('articleImage').src = selectedArticle.image;
+        document.getElementById('articleContent').textContent = selectedArticle.content;
+    </script>
+    <script src="glav.js"></script>
+</body>
+</html>

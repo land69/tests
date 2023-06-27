@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница избранное</title>
+    <style>
+        .favorites-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .favorites-list li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Избранное</h1>
+
+    <ul class="favorites-list" id="favorites-list">
+        <!-- Избранные тесты будут добавлены с помощью JavaScript -->
+    </ul>
+
+    <script>
+        const favoritesList = document.getElementById('favorites-list');
+        const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+        if (favorites.length === 0) {
+            const message = document.createElement('p');
+            message.textContent = 'Список избранных тестов пуст.';
+            favoritesList.appendChild(message);
+        } else {
+            favorites.forEach(function(test) {
+                const listItem = document.createElement('li');
+                const button = document.createElement('button');
+                button.textContent = test;
+                button.addEventListener('click', function() {
+                    localStorage.setItem('selectedTest', test);
+                    window.location.href = 'page3.html';
+                });
+                listItem.appendChild(button);
+                favoritesList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>

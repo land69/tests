@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+#articleTitle{
+    color: white;
+        }
+        #articleContent{
+            color: white;
+        }
+  
+    .contant{
+        width: 350px;
+        height: 60px;
+        box-shadow: 0 0 90px 5px rgb(139, 0, 139); /* Здесь задано значение для тени */
+      border-radius: 10px;
+                transition: box-shadow 0.9s ease;
+                border-width: 10px;
+                margin-top: 70px;
+
+
+                display: flex;
+  justify-content: center;
+  align-items: center;
+
+    }
+    .knopka_nazat {
+                text-decoration: none;
+                font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: white;
+
+
+
+            }
+            .articleContent {
+                max-width: 1320px;
+                margin: 0 auto;
+                text-align: justify;
+                font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+              }
+              
+              .articleContent p {
+                margin-bottom: 20px;
+                
+              }
+              .contant_x2x{
+                max-width: 1920px;
+                margin: 0 auto;
+                text-align: justify;
+                padding-bottom: 200px;
+              }
+              .articleTitle{
+                font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 150%;
+              }

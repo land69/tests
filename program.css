@@ -1,0 +1,54 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ gap: 30px;
+    
+  }
+  .card {
+    width: 333px;
+    height: 392px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-width: 10px;
+    box-shadow: 0 0 90px 5px rgb(139, 0, 139); /* Здесь задано значение для тени */
+  border-radius: 20px;
+}
+  
+  
+  
+  
+  
+  
+  .card-image {
+    width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-left:35px;
+    margin-top: 20px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    color: #888;
+  }
+  
+
+/* Кнопки к переходу к тестам */
+
+.pereiti_k_testam{
+    width: 250px;
+    height: 60px;
+background-color: black;
+color: rgb(255, 255, 255);
+border-color: rgb(139, 0, 139);;
+   margin-left: 35px;
+   margin-top: 20px;
+   border-radius: 15px;
+}

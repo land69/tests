@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="glav.css">
+    <link rel="stylesheet" href="program.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Избранное</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+    .favorite-buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .favorite-buttons-container button {
+        width: 70%;
+        max-width: 700px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+
+    .favorite-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+     cursor: pointer;
+    transition: background 0.3s ease;
+width: 250px;
+height: 60px;
+    box-shadow: 0 0 90px 5px rgb(139, 0, 139); /* Здесь задано значение для тени */
+border-radius: 20px;
+margin-left: 130px;
+  }
+
+ 
+
+ 
+
+  .clear-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+background-color: black;
+
+margin-top: 100px;
+width: 200px;
+    box-shadow: 0 0 90px 5px rgb(139, 0, 139); /* Здесь задано значение для тени */
+border-radius: 20px;
+  }
+
+ 
+  main{
+    max-width: 1920px;
+  margin: 0 auto;
+  }
+
+
+  h2{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 50px;
+  }
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logo.svg" alt="Логотип" class="desktop-logo">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="inde.html">Выбор теста</a></li>
+                <li><a href="statii.html">Статьи</a></li>
+                <li><a href="iz.html">Избранное</a></li>
+                <li><a href="obratsviz.html">Комментарии</a></li>
+              </ul>
+              <div class="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+              <ul class="burger-menu-items">
+                <li><a href="glav.html">Главная</a></li>
+                <li><a href="inde.html">Выбор теста</a></li>
+                <li><a href="statii.html">Статьи</a></li>
+                <li><a href="iz.html">Избранное</a></li>
+                <li><a href="obratsviz.html">Комментарии</a></li>
+              </ul>
+        </nav>
+    </header>
+    <main>
+    <h2>Избранные тесты</h2>
+   <!-- добавьте div с id "favorites-container" для хранения избранных элементов -->
+   <div class="favorites-container" id="favorites-container">
+    <!-- Избранные тесты будут добавлены с помощью JavaScript -->
+</div>
+<button class="clear-button" id="clear-button">Очистить</button>
+    </main>
+<footer>
+    <div class=".container_X1">
+      <div class="footer-content">
+        <div class="logo">
+          <img class="logo_img" src="img/logo.svg" alt="Логотип">
+        </div>
+        <nav class="navigation">
+          <ul>
+            <li><a href="glav.html">Главная</a></li>
+            <li><a href="inde.html">Выбор теста</a></li>
+            <li><a href="statii.html">Статьи</a></li>
+            <li><a href="iz.html">Избранное</a></li>
+          </ul>
+        </nav>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook"><img class="vk" src="img/pngegg (1).png"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <!-- <div class="footer-bottom">
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+      </div> -->
+    </div>
+  </footer>
+    <script>
+     const favoritesContainer = document.getElementById('favorites-container');
+  const clearButton = document.getElementById('clear-button');
+  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+  clearButton.addEventListener('click', function() {
+    localStorage.removeItem('favorites');
+    favoritesContainer.innerHTML = '';
+    alert('Избранное очищено');
+  });
+
+  favorites.forEach(function(testId) {
+    const testButton = document.createElement('button');
+    testButton.textContent = `Тест ${testId}`;
+    testButton.classList.add('favorite-button');
+    testButton.addEventListener('click', function() {
+      localStorage.setItem('selectedTest', testId);
+      window.location.href = 'page3.html'; // Замените на путь к странице с тестом
+    });
+    favoritesContainer.appendChild(testButton);
+  });
+
+        
+    </script>
+    <script src="glav.js"></script>
+
+</body>
+</html>

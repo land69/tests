@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+footer {
+  background-color: #000000;
+  padding: 120px 0;
+  max-width: 1920px;
+  margin: 0 auto;
+
+
+  
+}
+
+.container_X1 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 100px;
+  padding-left: 30px;
+  /* Регулируйте высоту логотипа по вашему желанию */
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  padding-right: 150px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 150%;
+}
+
+.navigation ul li {
+  margin-bottom: 10px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+.social-media a {
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.social-media i {
+  font-size: 20px;
+  padding-right: 40px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+
+  
+.vk{
+  width: 80px;
+}

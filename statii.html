@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Моя страница со статьями</title>
+    <style>
+     
+        .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 471px;
+  height: auto;
+  max-height: 305px;
+  background-color: #000;
+  overflow: hidden;
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0 0 90px 5px rgb(139, 0, 139); 
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+}
+
+.card img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.card .text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 24px;
+  font-size: 20px;
+  padding: 20px;
+}
+.card:hover {
+            box-shadow: 0 4px 8px  rgb(139, 0, 139);
+        }
+    </style>
+<link rel="stylesheet" href="glav.css">
+<link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <img src="img/logo.svg" alt="Логотип" class="desktop-logo">
+          </div>
+          <ul class="menu">
+            <li><a href="index.html">Главная</a></li>
+        <li><a href="inde.html">Выбор теста</a></li>
+        <li><a href="statii.html">Статьи</a></li>
+        <li><a href="iz.html">Избранное</a></li>
+        <li><a href="obratsviz.html">Комментарии</a></li>
+      </ul>
+          <div class="burger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <ul class="burger-menu-items">
+            <li><a href="glav.html">Главная</a></li>
+            <li><a href="inde.html">Выбор теста</a></li>
+            <li><a href="statii.html">Статьи</a></li>
+            <li><a href="iz.html">Избранное</a></li>
+            <li><a href="obratsviz.html">Комментарии</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+
+    <!-- <div class="articles-container">
+        <div class="article-preview" onclick="openArticle(1)">
+            <img src="img/scale_1200.webp" alt="Статья 1">
+            <h2>Статья 1</h2>
+        </div>
+        <div class="article-preview" onclick="openArticle(2)">
+            <img src="article2.jpg" alt="Статья 2">
+            <h2>Статья 2</h2>
+        </div>
+        <div class="article-preview" onclick="openArticle(3)">
+            <img src="article3.jpg" alt="Статья 3">
+            <h2>Статья 3</h2>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="card" onclick="openArticle(1)">
+          <img src="path_to_image1.jpg" alt="Image 1">
+          <div class="text">Текст для первой карточки</div>
+        </div>
+      
+        <div class="card" onclick="openArticle(2)">
+          <img src="path_to_image2.jpg" alt="Image 2">
+          <div class="text">Текст для второй карточки</div>
+        </div>
+      
+        <div class="card" onclick="openArticle(3)">
+          <img src="path_to_image3.jpg" alt="Image 3">
+          <div class="text">Текст для третьей карточки</div>
+        </div>
+      </div>
+      </main>
+      <footer>
+        <div class=".container_X1">
+          <div class="footer-content">
+            <div class="logo">
+              <img class="logo_img" src="img/logo.svg" alt="Логотип">
+            </div>
+            <nav class="navigation">
+              <ul>
+                <li><a href="glav.html">Главная</a></li>
+                <li><a href="inde.html">Выбор теста</a></li>
+                <li><a href="statii.html">Статьи</a></li>
+                <li><a href="iz.html">Избранное</a></li>
+              </ul>
+            </nav>
+            <div class="social-media">
+              <a href="#"><i class="fab fa-facebook"><img class="vk" src="img/pngegg (1).png"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <!-- <div class="footer-bottom">
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+          </div> -->
+        </div>
+      </footer>
+    <script>
+        function openArticle(articleIndex) {
+            window.location.href = "article.html?id=" + articleIndex;
+        }
+    </script>
+     <script src="glav.js"></script>
+</body>
+</html>
